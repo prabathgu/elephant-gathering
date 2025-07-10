@@ -13,7 +13,7 @@ This game was created using Claude Code as a learning experiment. For anyone cur
 | 2025-07-10 | - sonnet-4 |   132 |  4,237 |       199,224 |   4,146,595  |     4,350,188 |      $2.06  |
 | **Total**  |            | 1,588 | 37,576 |     3,050,817 |  42,060,242  |    45,150,223 |    **$24.63** |
 
-The sprites were created using chatgpt, and the background music was created using gabotechs/MusicGPT[https://github.com/gabotechs/MusicGPT]
+The sprites were created using chatgpt, and the background music was created using [gabotechs/MusicGPT](https://github.com/gabotechs/MusicGPT)
 
 ## 🎮 How to Play
 
@@ -56,7 +56,7 @@ The game has 5 levels with increasing numbers of farms and elephants.
 Each level has 3 herds with increasing difficulty and elephant counts.
 
 ### Play Online
-The game is hosted on GitHub pages and can be played directly in your web browser. Simply visit `https://prabathgu.github.io/elephant-gathering`
+The game is hosted on GitHub pages and can be played directly in your web browser. Simply visit https://prabathgu.github.io/elephant-gathering
 
 ## 📜 License
 
