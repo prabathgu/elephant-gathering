@@ -1,0 +1,17 @@
+{
+  "name": "elephant-conservation-game",
+  "version": "1.0.0",
+  "description": "A web game about elephant conservation and human-elephant conflict",
+  "main": "index.html",
+  "scripts": {
+    "start": "uv run python -m http.server 8000",
+    "dev": "uv run python -m http.server 8000"
+  },
+  "dependencies": {
+    "phaser": "^3.70.0"
+  },
+  "devDependencies": {},
+  "keywords": ["game", "phaser", "conservation", "elephant"],
+  "author": "",
+  "license": "MIT"
+}

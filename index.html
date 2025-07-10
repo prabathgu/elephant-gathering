@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elephant Conservation Game</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #2d5a27;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        #game-container {
+            border: 2px solid #4a7c59;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        #ui-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 14px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        #deterrent-menu {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 12px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            z-index: 100;
+        }
+        .deterrent-button {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            padding: 8px;
+            background: #4a7c59;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+        }
+        .deterrent-button:hover {
+            background: #5a8c69;
+        }
+        .deterrent-button:disabled {
+            background: #666;
+            cursor: not-allowed;
+        }
+        .deterrent-button.selected {
+            background: #ff6b6b;
+        }
+        #game-status {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+        .tooltip {
+            position: relative;
+            cursor: help;
+        }
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-container">
+            <div>Version: <span id="version">Loading...</span> | <button id="sound-toggle" style="background: none; border: none; color: white; cursor: pointer;">🔊</button></div>
+            <div>Budget: Rs.<span id="budget">500</span></div>
+            <div>Level: <span id="level">1</span> | Herd: <span id="herd">1</span>/3</div>
+            <div>Progress: <span id="herd-progress">0/8</span></div>
+            <div>Saved: <span id="saved">0</span> | Lost: <span id="lost">0</span></div>
+            <div>Farms Damaged: <span id="damaged-farms">0</span>/3</div>
+            <div>Elephants Lost (Herd): <span id="lost-this-herd">0</span>/3</div>
+            <div>Success Rate: <span id="success-rate">0%</span></div>
+            <div id="game-status"></div>
+        </div>
+        <div id="deterrent-menu">
+            <div><strong>Deterrents</strong></div>
+            <div id="deterrent-buttons-container">
+                <!-- Deterrent buttons will be dynamically generated -->
+            </div>
+            <button class="deterrent-button" id="clear-selection">Clear Selection</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.70.0/dist/phaser.min.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
